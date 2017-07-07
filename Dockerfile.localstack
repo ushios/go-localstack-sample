@@ -1,0 +1,4 @@
+FROM atlassianlabs/localstack
+LABEL maintainer "UshioShugo<ushio.s@gmail.com>"
+
+RUN pip install awscli

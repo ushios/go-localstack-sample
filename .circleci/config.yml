@@ -1,0 +1,16 @@
+version: '2'
+jobs:
+  build:
+    working_directory: ~/sample
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: check docker version
+          command: |
+            docker version
+            docker-compose version
+      - run:
+          name: test
+          command: |
+            make test

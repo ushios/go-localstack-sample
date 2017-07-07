@@ -1,2 +1,2 @@
-# go-localstack
-Using localstack with golang
+# go-localstack-sample
+Using localstack on golang

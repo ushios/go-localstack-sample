@@ -1,0 +1,17 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go/src/github.com/ushios/go-localstack-sample
+  localstack:
+    build:
+      context: .
+      dockerfile: Dockerfile.localstack
+    environment:
+      - SERVISCES=kinesis,s3
+    ports:
+      - 4567-4580:4567-4580
+      - 8080:8080
