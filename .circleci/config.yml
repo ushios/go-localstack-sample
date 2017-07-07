@@ -11,6 +11,10 @@ jobs:
             docker version
             docker-compose version
       - run:
+          name: build docker
+          command: |
+            docker-compose build
+      - run:
           name: test
           command: |
             make test
